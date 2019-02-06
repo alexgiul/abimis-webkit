@@ -1,0 +1,13 @@
+.flex {
+    &-v-align-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        &--bottom {
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="textarea"],
+textarea,
+select {
+	height: $field-height;
+	padding: 6px 10px;
+	background: $field-background;
+    border-width: $field-border-width;
+    border-style: $field-border-style;
+    border-color: $field-border-color;
+	border-radius: $field-radius;
+	box-shadow: $field-shadow;
+	box-sizing: border-box;
+
+	&:focus {
+		border-color: $field-border-color-focus;
+		outline: 0;
+	}
+}
+
+select {
+	color: $white;
+	border-color: $primary-color;
+    @if $solid-select { background: $primary-color }
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="textarea"],
+textarea {
+	appearance: none;
+}
+
+textarea {
+	max-width: 100%;
+	min-height: $field-height;
+	padding-top: $field-padding;
+	padding-bottom: $field-padding;
+}
+
+label,legend {
+	display: block;
+	margin-bottom: .5rem;
+	font-weight: 400;
+}
+
+fieldset {
+	padding: 0;
+	border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+label > .label-body {
+	display: inline-block;
+	margin-left: .5rem;
+	font-weight: normal;
+}

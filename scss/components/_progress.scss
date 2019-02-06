@@ -1,0 +1,36 @@
+.progress {
+	display: block;
+	position: relative;
+	border-radius: 3px;
+
+	&:after {
+		z-index: 2;
+	}
+	&[progress-value]:after, [progress-value]:before {
+		content: "";
+		display: block;
+		-webkit-transition: width 1s ease 0s;
+		transition: width 1s ease 0s;
+		background-color: $primary-color;
+		height: 6px;
+		border-radius: 3px;
+	}
+
+	&--primary			{ &[progress-value]:after, [progress-value]:before { @include solid-bg($primary-color); }}
+	&--secondary		{ &[progress-value]:after, [progress-value]:before { @include solid-bg($secondary-color); }}
+	&--warning			{ &[progress-value]:after, [progress-value]:before { @include solid-bg($warning-color); }}
+	&--danger			{ &[progress-value]:after, [progress-value]:before { @include solid-bg($danger-color); }}
+	&--success			{ &[progress-value]:after, [progress-value]:before { @include solid-bg($success-color); }}
+	&--info				{ &[progress-value]:after, [progress-value]:before { @include solid-bg($info-color); }}
+	&--white			{ &[progress-value]:after, [progress-value]:before { @include solid-bg($white); }}
+
+	&--squared			{ border-radius: 0; &[progress-value]:after, [progress-value]:before { border-radius: 0; }}
+	&--fixed			{ position: fixed; top:0; }
+}
+
+@for $i from 0 through 100 {
+	$width : percentage($i/100);
+	.progress[progress-value='#{$i}']:after {
+		width: $width;
+	}
+}

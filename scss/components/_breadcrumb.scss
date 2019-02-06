@@ -1,0 +1,33 @@
+.breadcrumb {
+    list-style: none;
+    background: lighten($fog, 10);
+    padding: 16px;
+    border-radius: 4px;
+
+    li {
+        display: inline-block;
+        color: $carbon;
+
+        &::after {
+            content: '/';
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        &:last-child {
+            font-weight: bold;
+
+            &::after {
+                content: '';
+            }
+        }
+    }
+
+    &--material {
+        @extend .card--elevation-1;
+    }
+
+    &--small {
+        padding: 4px 16px;
+    }
+}

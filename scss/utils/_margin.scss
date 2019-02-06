@@ -1,0 +1,48 @@
+@mixin margin($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+
+    &--tiny {
+        margin-top: $top * 0.25;
+        margin-right: $right * 0.25;
+        margin-bottom: $bottom * 0.25;
+        margin-left: $left * 0.25;
+    }
+    &--small {
+        margin-top: $top * 0.5;
+        margin-right: $right * 0.5;
+        margin-bottom: $bottom * 0.5;
+        margin-left: $left * 0.5;
+    }
+    &--big {
+        margin-top: $top * 2;
+        margin-right: $right * 2;
+        margin-bottom: $bottom * 2;
+        margin-left: $left * 2;
+    }
+    &--bigger {
+        margin-top: $top * 3;
+        margin-right: $right * 3;
+        margin-bottom: $bottom * 3;
+        margin-left: $left * 3;
+    }
+    &--huge {
+        margin-top: $top * 4;
+        margin-right: $right * 4;
+        margin-bottom: $bottom * 4;
+        margin-left: $left * 4;
+    }
+}
+
+.margin {
+    &-all       { @include margin(16px, 16px, 16px, 16px); }
+    &-vertical  { @include margin(16px, 0, 16px, 0); }
+    &-sides     { @include margin(0, 16px, 0, 16px); }
+    &-top       { @include margin(16px, 0, 0, 0); }
+    &-right     { @include margin(0, 16px, 0, 0); }
+    &-bottom    { @include margin(0, 0, 16px, 0); }
+    &-left      { @include margin(0, 0, 0, 16px); }
+    &-none      { @include margin(0, 0, 0, 0); }
+}

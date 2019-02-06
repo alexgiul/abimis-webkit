@@ -1,0 +1,36 @@
+.alert {
+    @extend .card;
+    @extend .card--composite;
+    @extend .card--balanced;
+    z-index: 10000;
+    color: $white;
+    text-align: center;
+    background: $primary-color;
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 0;
+    }
+
+    &__icon {
+        font-size: 6em;
+        margin: 16px;
+    }
+
+    &__actions {
+        @extend .card__actions;
+        background: $white;
+        border-top: 0;
+        text-align: right;
+    }
+
+    &--danger { background: $danger-color; }
+    &--warning { background: $warning-color; }
+    &--info { background: $info-color; }
+    &--success { background: $success-color; }
+}

@@ -1,0 +1,99 @@
+//grid
+
+$advanced-breakpoints:          false                                           !default;
+$grid-width-limit-active:       false                                           !default;
+$grid-width:                    1280px                                          !default;
+$grid-base-gutter:              24px                                            !default;
+
+//grid -- widths
+
+$phone-s:                       360px                                           !default;
+$phone-m:                       400px                                           !default;
+$phone-l:                       480px                                           !default;
+$tab-s:                         600px                                           !default;
+$tab-m:                         720px                                           !default;
+$tab-l:                         840px                                           !default;
+$tab-xl:                        960px                                           !default;
+$desk-s:                        1024px                                          !default;
+$desk-m:                        1280px                                          !default;
+$desk-l:                        1440px                                          !default;
+$desk-xl:                       1600px                                          !default;
+
+$phone:                         $phone-s                                        !default;
+$phablet:                       $phone-m                                        !default;
+$tab:                           $tab-s                                          !default;
+$lap:                           $desk-s                                         !default;
+$desk:                          $desk-m                                         !default;
+
+//colors
+
+$black:                         #000000                                         !default;
+$coal:                          #333333                                         !default;
+$carbon:                        #666666                                         !default;
+$smoke:                         #999999                                         !default;
+$fog:                           #d8d8d8                                         !default;
+$white:                         #ffffff                                         !default;
+
+$primary-color:                 #00c26e                                         !default;
+$secondary-color:               #169cee                                         !default;
+$warning-color:                 #f5a623                                         !default;
+$danger-color:                  #e74c3c                                         !default;
+$success-color:                 #b8e986                                         !default;
+$info-color:                    $white                                          !default;
+
+//typography
+
+$heading-huge:                  4.0rem                                          !default;
+$heading-large:                 3.6rem                                          !default;
+$heading-medium:                3.0rem                                          !default;
+$heading-small:                 2.4rem                                          !default;
+$heading-smaller:               1.8rem                                          !default;
+$heading-tiny:                  1.5rem                                          !default;
+
+//buttons
+
+$button-height:                 36px                                            !default;
+$button-padding:                0 24px                                          !default;
+$button-radius:                 6px                                             !default;
+
+//fields
+
+$field-height:                  40px                                            !default;
+$field-padding:                 0 20px                                          !default;
+$field-radius:                  6px                                             !default;
+$field-background:              rgba(255,255,255,0.2)                           !default;
+$field-border-width:            2px                                             !default;
+$field-border-style:            solid                                           !default;
+$field-border-color:            $fog                                            !default;
+$field-border-color-focus:      $primary-color                                  !default;
+$field-shadow:                  none                                            !default;
+$solid-select:                  true                                            !default;
+
+$stepper-gutter:                8px                                             !default;
+
+//topnav
+
+$topnav-height:                 64px                                            !default;
+$topnav-logo-padding:           8px                                             !default;
+$topnav-logo-height:            $topnav-height - ($topnav-logo-padding * 2)     !default;
+$topnav-color:                  $primary-color                                  !default;
+$topnav-text-color:             $white                                          !default;
+
+//drawer
+
+$drawer-width: 320px                                                            !default;
+$drawer-reveal-duration: .3s                                                    !default;
+$drawer-shadow: -8px 0px 24px 0px $black                                        !default;
+$drawer-inset-shadow: inset -2px 0px 20px -10px $black                          !default;
+$drawer-body-padding: 8px 1px                                                   !default;
+$drawer-body-border-box: true                                                   !default;
+$drawer-list-margin: 0                                                          !default;
+$drawer-list-font-size: 1.6rem                                                  !default;
+$drawer-list-item-height: 48px                                                  !default;
+$drawer-list-item-padding: 0 16px                                               !default;
+$drawer-list-item-hover-color: lighten($fog, 10%)                               !default;
+
+//misc
+
+$code-theme:                    'dark';
+$progress-color:                $secondary-color;

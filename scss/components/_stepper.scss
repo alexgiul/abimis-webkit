@@ -1,0 +1,49 @@
+.stepper {
+	position: relative;
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+	button {
+		position: absolute;
+		top: $stepper-gutter;
+        right: $stepper-gutter;
+		height: $field-height - $stepper-gutter * 2;
+		width: $field-height - $stepper-gutter * 2;
+		line-height: 0;
+		font-size: 12px;
+		color: $fog;
+		vertical-align: middle;
+		border-radius: 50%;
+		border: 2px solid $fog;
+		background: transparent;
+        text-align: center;
+		cursor: pointer;
+
+        &:last-child {
+            right: $field-height;
+        }
+
+        &:hover {
+            color: $smoke;
+            border: 2px solid $smoke;
+        }
+	}
+
+    &--paddingless {
+
+        input {
+            padding-left: 0;
+        }
+
+        button {
+            right: 0;
+
+            &:last-child {
+                right: $field-height - $stepper-gutter;
+            }
+    	}
+    }
+}

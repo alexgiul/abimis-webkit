@@ -1,0 +1,49 @@
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.max-full-width {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.v-align {
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.round-pic {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 100%;
+        width: auto;
+        transform: translate(-50%,-50%);
+    }
+
+    &--portrait {
+        width: 100%;
+        height: auto;
+    }
+
+    &--tiny     { width: 16px; height: 16px; }
+    &--small    { width: 32px; height: 32px; }
+    &--big      { width: 128px; height: 128px; }
+    &--bigger   { width: 256px; height: 256px; }
+    &--huge     { width: 512px; height: 512px; }
+}

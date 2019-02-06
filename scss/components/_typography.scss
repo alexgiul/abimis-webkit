@@ -1,0 +1,93 @@
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	font-weight: 300;
+}
+
+h1 { font-size: $heading-huge; line-height: 1.2; letter-spacing: -.1rem; }
+h2 { font-size: $heading-large; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: $heading-medium; line-height: 1.3; letter-spacing: -.1rem; }
+h4 { font-size: $heading-small; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: $heading-smaller; line-height: 1.5; letter-spacing: -.05rem; }
+h6 { font-size: $heading-tiny; line-height: 1.6; letter-spacing: 0; }
+
+@media (min-width: 550px) {
+	h1 { font-size: $heading-huge * 1.25; }
+	h2 { font-size: $heading-large * 1.25; }
+	h3 { font-size: $heading-medium * 1.25; }
+	h4 { font-size: $heading-small * 1.25; }
+	h5 { font-size: $heading-smaller * 1.25; }
+	h6 { font-size: $heading-tiny * 1.25; }
+}
+
+p { margin-top: 0; }
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+}
+
+a:hover { color: darken( $primary-color, 20% ); }
+
+a[disabled] {
+	pointer-events: none;
+	color: $smoke !important;
+	cursor: not-allowed;
+}
+
+blockquote, .quote {
+	margin: 0;
+	padding-left: 3.0rem;
+	width: 100%;
+	border-left: 2px solid $fog;
+
+	p, &__body {
+		font-style: italic;
+		font-size: 2.5rem;
+		color: $smoke;
+	}
+
+	small, &__author {
+		font-size: 1rem;
+		color: $carbon;
+	}
+}
+
+@if $code-theme == 'dark' {
+	code {
+		color: $white;
+		padding: 1px 4px;
+		border: solid 1px darken($coal, 10%);
+		background: $coal;
+		border-radius: 4px;
+		margin: 0px 2px;
+	}
+}
+@else {
+	code {
+		color: $coal;
+		padding: 1px 4px;
+		border: solid 1px darken($fog, 10%);
+		background: $fog;
+		border-radius: 4px;
+		margin: 0px 2px;
+	}
+}
+
+pre > code {
+	display: block;
+	overflow-x: scroll;
+	padding: 4px 8px;
+	margin: 0px;
+}
+
+pre { overflow: hidden; }
+
+samp {
+	color: $danger-color;
+	padding: 1px 4px;
+	border: solid 1px $fog;
+	background: lighten($fog, 10%);
+	border-radius: 4px;
+	margin: 0px 2px;
+}

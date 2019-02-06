@@ -1,0 +1,79 @@
+@mixin push-setup($name: "global-") {
+
+    .push--#{$name}1of1      { margin-left: 100%; }
+
+    .push--#{$name}1of2      { margin-left: 50%; }
+
+    .push--#{$name}1of3      { margin-left: 33.333%; }
+    .push--#{$name}2of3      { margin-left: 66.666%; }
+
+    .push--#{$name}1of4      { margin-left: 25%; }
+    .push--#{$name}2of4      { @extend .push--#{$name}1of2; }
+    .push--#{$name}3of4      { margin-left: 75%; }
+
+    .push--#{$name}1of5      { margin-left: 20%; }
+    .push--#{$name}2of5      { margin-left: 40%; }
+    .push--#{$name}3of5      { margin-left: 60%; }
+    .push--#{$name}4of5      { margin-left: 80%; }
+
+    .push--#{$name}1of6      { margin-left: 16.666%; }
+    .push--#{$name}2of6      { @extend .push--#{$name}1of3; }
+    .push--#{$name}3of6      { @extend .push--#{$name}1of2; }
+    .push--#{$name}4of6      { @extend .push--#{$name}2of3; }
+    .push--#{$name}5of6      { margin-left: 83.333%; }
+
+    .push--#{$name}1of8      { margin-left: 12.5%; }
+    .push--#{$name}2of8      { @extend .push--#{$name}1of4; }
+    .push--#{$name}3of8      { margin-left: 37.5%; }
+    .push--#{$name}4of8      { @extend .push--#{$name}1of2; }
+    .push--#{$name}5of8      { margin-left: 62.5%; }
+    .push--#{$name}6of8      { @extend .push--#{$name}3of4; }
+    .push--#{$name}7of8      { margin-left: 87.5%; }
+
+    .push--#{$name}1of10     { margin-left: 10%; }
+    .push--#{$name}2of10     { @extend .push--#{$name}1of5; }
+    .push--#{$name}3of10     { margin-left: 30%; }
+    .push--#{$name}4of10     { @extend .push--#{$name}2of5; }
+    .push--#{$name}5of10     { @extend .push--#{$name}1of2; }
+    .push--#{$name}6of10     { @extend .push--#{$name}3of5; }
+    .push--#{$name}7of10     { margin-left: 70%; }
+    .push--#{$name}8of10     { @extend .push--#{$name}4of5; }
+    .push--#{$name}9of10     { margin-left: 90%; }
+
+    .push--#{$name}1of12     { margin-left: 8.333%; }
+    .push--#{$name}2of12     { @extend .push--#{$name}1of6; }
+    .push--#{$name}3of12     { @extend .push--#{$name}1of4; }
+    .push--#{$name}4of12     { @extend .push--#{$name}1of3; }
+    .push--#{$name}5of12     { margin-left: 41.666% }
+    .push--#{$name}6of12     { @extend .push--#{$name}1of2; }
+    .push--#{$name}7of12     { margin-left: 58.333%; }
+    .push--#{$name}8of12     { @extend .push--#{$name}2of3; }
+    .push--#{$name}9of12     { @extend .push--#{$name}3of4; }
+    .push--#{$name}10of12    { @extend .push--#{$name}5of6; }
+    .push--#{$name}11of12    { margin-left: 91.666%; }
+}
+
+@include push-setup();
+@include media-query(phone-S) { @include push-setup("phone-S-"); }
+@include media-query(phone-M) { @include push-setup("phone-M-"); }
+@include media-query(phone-L) { @include push-setup("phone-L-"); }
+@include media-query(tab-S) { @include push-setup("tab-S-"); }
+@include media-query(tab-M) { @include push-setup("tab-M-"); }
+@include media-query(tab-L) { @include push-setup("tab-L-"); }
+@include media-query(tab-XL) { @include push-setup("tab-XL-"); }
+@include media-query(desk-S) { @include push-setup("desk-S-"); }
+@include media-query(desk-M) { @include push-setup("desk-M-"); }
+@include media-query(desk-L) { @include push-setup("desk-L-"); }
+@include media-query(desk-XL) { @include push-setup("desk-XL-"); }
+@include media-query(tv) { @include push-setup("tv-"); }
+
+@include media-query(phone) { @include push-setup("phone-"); }
+@include media-query(phone-up) { @include push-setup("phone-up-"); }
+@include media-query(phablet) { @include push-setup("phablet-"); }
+@include media-query(phablet-up) { @include push-setup("phablet-up-"); }
+@include media-query(tab) { @include push-setup("tab-"); }
+@include media-query(tab-up) { @include push-setup("tab-up-"); }
+@include media-query(lap) { @include push-setup("lap-"); }
+@include media-query(lap-up) { @include push-setup("lap-up-"); }
+@include media-query(desk) { @include push-setup("desk-"); }
+@include media-query(desk-wide) { @include push-setup("desk-wide-"); }

@@ -1,0 +1,32 @@
+{
+  "name": "abimis-webkit",
+  "version": "0.1.4",
+  "description": "A kit of several components and helpers to improve the web development workflow https://abimis.aterrae.com",
+  "main": [
+    "scss/abimis.scss",
+    "js/abimis.js"
+  ],
+  "keywords": [
+    "abimis",
+    "aterrae",
+    "websites",
+    "front-end",
+    "webkit"
+  ],
+  "authors": [
+    "Aterrae | Digital Growth <info@aterrae.com> (https://aterrae.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://abimis.aterrae.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate-sass": "^0.6.6",
+    "jquery": "^3.2.1"
+  }
+}

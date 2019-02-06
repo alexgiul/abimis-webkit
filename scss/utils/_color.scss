@@ -1,0 +1,37 @@
+@mixin background($color) {
+    background: $color;
+}
+
+.color {
+    &--primary { color: $primary-color; }
+    &--secondary { color: $secondary-color; }
+    &--warning { color: $warning-color; }
+    &--danger { color: $danger-color; }
+    &--success { color: $success-color; }
+    &--info { color: $info-color; }
+
+    &--white { color: $white; }
+    &--fog { color: $fog; }
+    &--smoke { color: $smoke; }
+    &--carbon { color: $carbon; }
+    &--coal { color: $coal; }
+    &--black { color: $black; }
+}
+
+.background {
+    &--primary { background: $primary-color !important; }
+    &--secondary { background: $secondary-color !important; }
+    &--warning { background: $warning-color !important; }
+    &--danger { background: $danger-color !important; }
+    &--success { background: $success-color !important; }
+    &--info { background: $info-color !important; }
+}
+
+.border {
+    &--primary { border-color: $primary-color; }
+    &--secondary { border-color: $secondary-color; }
+    &--warning { border-color: $warning-color; }
+    &--danger { border-color: $danger-color; }
+    &--success { border-color: $success-color; }
+    &--info { border-color: $info-color; }
+}

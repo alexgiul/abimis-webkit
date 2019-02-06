@@ -1,0 +1,81 @@
+@mixin grid-setup($name: "global-") {
+
+    .#{$name}1of1      { width: 100%; }
+
+    .#{$name}1of2      { width: 50%; }
+
+    .#{$name}1of3      { width: 33.333%; }
+    .#{$name}2of3      { width: 66.666%; }
+
+    .#{$name}1of4      { width: 25%; }
+    .#{$name}2of4      { @extend .#{$name}1of2; }
+    .#{$name}3of4      { width: 75%; }
+
+    .#{$name}1of5      { width: 20%; }
+    .#{$name}2of5      { width: 40%; }
+    .#{$name}3of5      { width: 60%; }
+    .#{$name}4of5      { width: 80%; }
+
+    .#{$name}1of6      { width: 16.666%; }
+    .#{$name}2of6      { @extend .#{$name}1of3; }
+    .#{$name}3of6      { @extend .#{$name}1of2; }
+    .#{$name}4of6      { @extend .#{$name}2of3; }
+    .#{$name}5of6      { width: 83.333%; }
+
+    .#{$name}1of8      { width: 12.5%; }
+    .#{$name}2of8      { @extend .#{$name}1of4; }
+    .#{$name}3of8      { width: 37.5%; }
+    .#{$name}4of8      { @extend .#{$name}1of2; }
+    .#{$name}5of8      { width: 62.5%; }
+    .#{$name}6of8      { @extend .#{$name}3of4; }
+    .#{$name}7of8      { width: 87.5%; }
+
+    .#{$name}1of10     { width: 10%; }
+    .#{$name}2of10     { @extend .#{$name}1of5; }
+    .#{$name}3of10     { width: 30%; }
+    .#{$name}4of10     { @extend .#{$name}2of5; }
+    .#{$name}5of10     { @extend .#{$name}1of2; }
+    .#{$name}6of10     { @extend .#{$name}3of5; }
+    .#{$name}7of10     { width: 70%; }
+    .#{$name}8of10     { @extend .#{$name}4of5; }
+    .#{$name}9of10     { width: 90%; }
+
+    .#{$name}1of12     { width: 8.333%; }
+    .#{$name}2of12     { @extend .#{$name}1of6; }
+    .#{$name}3of12     { @extend .#{$name}1of4; }
+    .#{$name}4of12     { @extend .#{$name}1of3; }
+    .#{$name}5of12     { width: 41.666% }
+    .#{$name}6of12     { @extend .#{$name}1of2; }
+    .#{$name}7of12     { width: 58.333%; }
+    .#{$name}8of12     { @extend .#{$name}2of3; }
+    .#{$name}9of12     { @extend .#{$name}3of4; }
+    .#{$name}10of12    { @extend .#{$name}5of6; }
+    .#{$name}11of12    { width: 91.666%; }
+
+    .#{$name}center    { margin: 0 auto; float: none }
+}
+
+@include grid-setup();
+@include media-query(phone-S) { @include grid-setup("phone-S-"); }
+@include media-query(phone-M) { @include grid-setup("phone-M-"); }
+@include media-query(phone-L) { @include grid-setup("phone-L-"); }
+@include media-query(tab-S) { @include grid-setup("tab-S-"); }
+@include media-query(tab-M) { @include grid-setup("tab-M-"); }
+@include media-query(tab-L) { @include grid-setup("tab-L-"); }
+@include media-query(tab-XL) { @include grid-setup("tab-XL-"); }
+@include media-query(desk-S) { @include grid-setup("desk-S-"); }
+@include media-query(desk-M) { @include grid-setup("desk-M-"); }
+@include media-query(desk-L) { @include grid-setup("desk-L-"); }
+@include media-query(desk-XL) { @include grid-setup("desk-XL-"); }
+@include media-query(tv) { @include grid-setup("tv-"); }
+
+@include media-query(phone) { @include grid-setup("phone-"); }
+@include media-query(phone-up) { @include grid-setup("phone-up-"); }
+@include media-query(phablet) { @include grid-setup("phablet-"); }
+@include media-query(phablet-up) { @include grid-setup("phablet-up-"); }
+@include media-query(tab) { @include grid-setup("tab-"); }
+@include media-query(tab-up) { @include grid-setup("tab-up-"); }
+@include media-query(lap) { @include grid-setup("lap-"); }
+@include media-query(lap-up) { @include grid-setup("lap-up-"); }
+@include media-query(desk) { @include grid-setup("desk-") };
+@include media-query(desk-wide) { @include grid-setup("desk-wide-"); }

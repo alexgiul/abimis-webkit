@@ -1,0 +1,17 @@
+table {
+	width: 100%;
+}
+
+th,td {
+	padding: 1rem 1.5rem;
+	text-align: left;
+	border-bottom: 1px solid $fog;
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	&:last-child {
+		padding-right: 0;
+	}
+}

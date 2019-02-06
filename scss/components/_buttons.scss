@@ -1,0 +1,106 @@
+@mixin button($color, $hollow) {
+	display: inline-block;
+	height: $button-height;
+	padding: $button-padding;
+	color: $white;
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 400;
+	line-height: $button-height;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: $color;
+	border: 1px solid $color;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: 0.2s;
+
+	&:hover, &:focus {
+		color: $white;
+		background-color: darken($color, 10%);
+		border-color: darken($color, 10%);
+		outline: 0;
+		transition: 0.2s;
+	}
+
+	&.button--hollow {
+		color: $color;
+		background-color: transparent;
+		border: 1px solid $color;
+
+		&:hover, &:focus {
+			background-color: transparent;
+			color: darken($color, 10%);
+			border-color: darken($color, 10%);
+			outline: 0;
+			transition: 0.2s;
+		}
+	}
+
+	&.button--material {
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+		&:hover, &:focus {
+			background: $color;
+			border: 1px solid $color;
+			color: $white;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			transition: 0.2s;
+		}
+	}
+}
+
+.button {
+	&__shadow-box {
+		padding-bottom: 12px;
+	}
+
+	@include button($primary-color, true);
+	&--secondary		{ @include button($secondary-color, true); }
+	&--warning			{ @include button($warning-color, true); }
+	&--danger			{ @include button($danger-color, true); }
+	&--success			{ @include button($success-color, true); }
+	&--info				{ @include button($info-color, true); }
+
+	&--rounded			{ border-radius: $button-radius; }
+	&--round			{ border-radius: $button-height * 2; }
+
+	&--huge             { height: $button-height * 1.60; line-height: $button-height * 1.60; }
+
+	&--big              { height: $button-height * 1.30; line-height: $button-height * 1.30; }
+
+	&--small            { height: $button-height * 0.80; line-height: $button-height * 0.80; }
+
+	&--tiny             { height: $button-height * 0.60; line-height: $button-height * 0.60; }
+
+	&--fullwidth		{ width: 100%; }
+
+	&--uppercase		{ font-size-adjust: uppercase; }
+	&--lowercase		{ font-size-adjust: lowercase; }
+
+	&--circle {
+		height: 54px;
+		width: 54px;
+		border-radius: 50%;
+		font-size: 24px;
+		line-height: 54px;
+		padding: 0;
+	}
+
+	&--icon {
+		line-height: 24px;
+		background: transparent;
+		border: none;
+		padding: 8px;
+		color: $carbon;
+
+		&:hover, &:focus {
+			color: $primary-color;
+			background: transparent;
+			border: none;
+		}
+
+		i { font-size: 24px; }
+		a { height: 24px; }
+	}
+}

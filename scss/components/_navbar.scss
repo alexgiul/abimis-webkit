@@ -1,0 +1,133 @@
+.topnav {
+    width: 100%;
+    height: $topnav-height;
+    background: $topnav-color;
+    z-index: 1000;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $topnav-color;
+
+        li {
+            float: left;
+            height: 100%;
+
+            a {
+                display: inline-block;
+                color: $topnav-text-color;
+                text-align: center;
+                padding: 0 $topnav-height/2;
+                text-decoration: none;
+                transition: 0.3s;
+                height: 100%;
+                font-size: 1.6rem;
+                line-height: $topnav-height;
+
+                &:hover { background-color: darken($topnav-color, 10%); }
+            }
+
+            &:first-child {
+                height: $topnav-height;
+            }
+        }
+    }
+
+    &__burger {
+        display: none;
+        float: right;
+    }
+
+    &__logo {
+        padding: $topnav-logo-padding 0;
+        height: $topnav-logo-height;
+        width: auto;
+
+        img {
+            padding: $topnav-logo-padding 0;
+            height: $topnav-logo-height;
+            width: auto;
+        }
+    }
+
+    &__left {
+        float: left;
+    }
+
+    &__right {
+        float: right;
+    }
+
+    &--center-logo {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .topnav {
+        position: relative;
+        ul {
+            li:not(:first-child):not(:last-child) { display: none; }
+            li:first-child {
+                height: $topnav-height;
+                a { height: $topnav-height; }
+            }
+        }
+
+        &__logo {
+            display: inline-block;
+        }
+
+        &__burger {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: auto !important;
+        }
+
+        &--responsive {
+            position: relative;
+            ul {
+                li {
+                    float: none;
+                    display: inline !important;
+
+                    a {
+                        display: block;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        &--center-logo {
+            text-align: center;
+            .topnav {
+                &__logo {
+                    padding: $topnav-logo-padding 0;
+                    height: $topnav-logo-height;
+                    width: auto;
+                }
+
+                &__right {
+                    width: 100%;
+                    li:not(:last-child) {
+                        display: none;
+                        width: 100%;
+                    }
+                }
+
+                &__left {
+                    width: 100%;
+                    li {
+                        display: none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.band {
+	position: relative;
+	height: 384px;
+	width: 100%;
+	margin-bottom: 5rem;
+	color: $white;
+
+	&--small { height: 256px; }
+	&--huge { height: 80%; }
+
+	&--primary			{ @include solid-bg($primary-color); }
+	&--secondary		{ @include solid-bg($secondary-color); }
+	&--warning			{ @include solid-bg($warning-color); }
+	&--danger			{ @include solid-bg($danger-color); }
+	&--success			{ @include solid-bg($success-color); }
+	&--info				{ @include solid-bg($info-color); }
+}

@@ -1,0 +1,35 @@
+@mixin lister($query) {
+    @include media-query($query) {
+        @for $i from 1 through 10 {
+            &-#{$i} { li { width: (100% / $i); }}
+        }
+    }
+}
+
+.grid-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: 0;
+    border: none;
+
+    &--limited {
+        max-width: $desk;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    li {
+        width: 100%;
+        display: inline-block;
+        font-size: 1.5rem;
+        position: relative;
+    }
+
+    &--S { @include lister(phone-up); }
+
+    &--M { @include lister(tab-up); }
+
+    &--L { @include lister(desk); }
+}

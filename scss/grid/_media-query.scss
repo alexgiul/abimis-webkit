@@ -1,0 +1,73 @@
+@mixin media-query($media-query) {
+    @if $advanced-breakpoints {
+        @if $media-query == phone-S {
+            @media only screen and (max-width: $phone-S) { @content; }
+        }
+        @if $media-query == phone-M {
+            @media only screen and (min-width: $phone-S + 1) and (max-width: $phone-M) { @content; }
+        }
+        @if $media-query == phone-L {
+            @media only screen and (min-width: $phone-M + 1) and (max-width: $phone-L) { @content; }
+        }
+        @if $media-query == tab-S {
+            @media only screen and (min-width: $phone-L + 1) and (max-width: $tab-S) { @content; }
+        }
+        @if $media-query == tab-M {
+            @media only screen and (min-width: $tab-S + 1) and (max-width: $tab-M) { @content; }
+        }
+        @if $media-query == tab-L {
+            @media only screen and (min-width: $tab-M + 1) and (max-width: $tab-L) { @content; }
+        }
+        @if $media-query == tab-XL {
+            @media only screen and (min-width: $tab-L + 1) and (max-width: $tab-XL) { @content; }
+        }
+        @if $media-query == desk-S {
+            @media only screen and (min-width: $tab-XL + 1) and (max-width: $desk-S) { @content; }
+        }
+        @if $media-query == desk-M {
+            @media only screen and (min-width: $desk-S + 1) and (max-width: $desk-M) { @content; }
+        }
+        @if $media-query == desk-L {
+            @media only screen and (min-width: $desk-M + 1) and (max-width: $desk-L) { @content; }
+        }
+        @if $media-query == desk-XL {
+            @media only screen and (min-width: $desk-L + 1) and (max-width: $desk-XL) { @content; }
+        }
+        @if $media-query == tv {
+            @media only screen and (min-width: $desk-XL + 1) { @content; }
+        }
+    }
+
+    @else {
+        @if $media-query == phone {
+            @media only screen and (max-width: $phone) { @content; }
+        }
+        @if $media-query == phone-up {
+            @media only screen and (min-width: 0px) { @content; }
+        }
+        @if $media-query == phablet {
+            @media only screen and (min-width: $phone + 1) and (max-width: $phablet) { @content; }
+        }
+        @if $media-query == phablet-up {
+            @media only screen and (min-width: $phone + 1) { @content; }
+        }
+        @if $media-query == tab {
+            @media only screen and (min-width: $phablet + 1) and (max-width: $tab) { @content; }
+        }
+        @if $media-query == tab-up {
+            @media only screen and (min-width: $phablet + 1) { @content; }
+        }
+        @if $media-query == lap {
+            @media only screen and (min-width: $tab + 1) and (max-width: $lap) { @content; }
+        }
+        @if $media-query == lap-up {
+            @media only screen and (min-width: $tab + 1) { @content; }
+        }
+        @if $media-query == desk {
+            @media only screen and (min-width: $lap + 1) { @content; }
+        }
+        @if $media-query == desk-wide {
+            @media only screen and (min-width: $desk + 1) { @content; }
+        }
+    }
+}

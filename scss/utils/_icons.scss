@@ -1,0 +1,18 @@
+.icon {
+    font-size: 32px;
+    &--tiny { font-size: 16px; }
+    &--small { font-size: 24px; }
+    &--big { font-size: 48px; }
+    &--bigger { font-size: 64px; }
+    &--huge { font-size: 128px; }
+
+    &--active { color: $primary-color; }
+
+    &--clickable {
+        color: $smoke;
+        &:hover {
+            color: $primary-color;
+            transition: 0.1s;
+        }
+    }
+}

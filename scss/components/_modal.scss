@@ -1,0 +1,50 @@
+.modal {
+    @extend .v-align;
+
+    box-sizing: border-box;
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    &__close {
+        position: absolute;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        vertical-align: middle;
+        text-align: center;
+        padding: 8px;
+        font-size: 24px;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &--material {
+        @extend .card;
+        @extend .card--elevation-3;
+    }
+
+    &--simple {
+        padding: 32px 16px;
+        background: $white;
+    }
+
+    &--scrollable {
+        max-height: 100%;
+        overflow: scroll;
+    }
+
+    &--tiny { @extend .lap-up-1of3;  }
+    &--small { @extend .lap-up-1of2; }
+    &--big { @extend .lap-up-2of3; }
+}
